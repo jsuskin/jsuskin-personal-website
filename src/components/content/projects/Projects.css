@@ -1,0 +1,125 @@
+.projects-list {
+  /* position: absolute;
+  top: 0; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.project-card {
+  /* border: 2px solid rgba(77,29,36, 0.4); */
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  margin: 2.5%;
+  padding: 3.33%;
+  width: 50vw;
+  /* height: 20vh; */
+  height: auto;
+  overflow: scroll;
+  /* align-items: flex-end; */
+  /* justify-content: center; */
+}
+
+.project-card > * {
+  padding: 0.2%;
+}
+
+
+.card-left {
+  /* background: radial-gradient(farthest-corner at left, rgba(176, 135, 130, 0.9) 0%, rgba(176, 135, 130, 0.4) 5%, rgba(176, 135, 130, 0.3) 15%, rgba(176, 135, 130, 0.15) 50%, rgba(176, 135, 130, 0.02) 100%); */
+  background: linear-gradient(to right, rgba(176, 135, 130, 0.3) 0%, rgba(176, 135, 130, 0.25) 15%, rgba(176, 135, 130, 0.15) 50%, rgba(176, 135, 130, 0.02) 100%);
+  margin-left: -36%;
+  /* text-align: right; */
+  /* animation: fade-right 2s ease-out; */
+  animation: fade-left 1.3s ease-out;
+}
+
+.card-right {
+  /* background: radial-gradient(farthest-corner at right, rgba(176, 135, 130, 0.9) 0%, rgba(176, 135, 130, 0.4) 5%, rgba(176, 135, 130, 0.3) 15%, rgba(176, 135, 130, 0.15) 50%, rgba(176, 135, 130, 0.02) 100%); */
+  background: linear-gradient(to left, rgba(176, 135, 130, 0.3) 0%, rgba(176, 135, 130, 0.25) 15%, rgba(176, 135, 130, 0.15) 50%, rgba(176, 135, 130, 0.02) 100%);
+  margin-left: 36%;
+  /* text-align: left; */
+  /* animation: fade-left 2s ease-out; */
+  animation: fade-right 1.3s ease-out;
+}
+
+.card-right .project-details {
+
+  text-align: right;
+}
+
+.card-right .preview-container .preview {
+  /* order: -1; */
+}
+
+.card-left .preview-container .preview {
+  /* order: -1; */
+}
+
+.preview-container > :not(.link) {
+  /* position: relative; */
+  text-align: center;
+  /* padding: 2%; */
+  /* position: relative; */
+  /* border: 1px dotted orange; */
+  /* background: black; */
+  height: auto;
+  transition: transform .5s;
+  transform-origin: top;
+  transform: scaleY(1);
+}
+
+.demo {
+  /* display: block; */
+  position: relative;
+  padding-top: 70%;
+
+}
+
+.hidden {
+  display: none;
+  transform: scaleY(0);
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* border: 1px dotted orange; */
+}
+
+.view-demo {
+  /* position: absolute; */
+  font-size: 2.56em;
+  cursor: pointer;
+  transition: all .3s linear;
+}
+
+.view-close {
+  transform: rotate(135deg);
+  /* transform: rotate(225deg); */
+}
+
+@keyframes fade-left {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
